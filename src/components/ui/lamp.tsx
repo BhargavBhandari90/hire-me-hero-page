@@ -1,8 +1,8 @@
-
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
+import { Button } from "@/components/ui/button";
 
 export function LampDemo() {
   return (
@@ -17,8 +17,35 @@ export function LampDemo() {
         }}
         className="mt-8 bg-gradient-to-br from-slate-300 to-slate-500 py-4 bg-clip-text text-center text-4xl font-medium tracking-tight text-transparent md:text-7xl"
       >
-        Build lamps <br /> the right way
+        Full Stack <br /> Web Developer
       </motion.h1>
+      <motion.p
+        initial={{ opacity: 0.5, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{
+          delay: 0.5,
+          duration: 0.8,
+          ease: "easeInOut",
+        }}
+        className="mt-6 text-slate-400 text-center text-lg md:text-xl max-w-2xl"
+      >
+        Creating modern, responsive web applications with cutting-edge technologies. 
+        Let's bring your ideas to life.
+      </motion.p>
+      <motion.div
+        initial={{ opacity: 0.5, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{
+          delay: 0.7,
+          duration: 0.8,
+          ease: "easeInOut",
+        }}
+        className="mt-8"
+      >
+        <Button size="lg" className="bg-cyan-500 hover:bg-cyan-600 text-white px-8 py-3 text-lg">
+          Hire Me
+        </Button>
+      </motion.div>
     </LampContainer>
   );
 }
